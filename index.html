@@ -1,616 +1,484 @@
+
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jay的个人博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Jay的个人博客">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jay的个人博客">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>Jay的个人博客</title>
-  
-
-
-
-
-
-
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Jay Fan &ndash; Interaction Designer</title>
+    <meta name="description" content="Jay Fan is a interaction designer living in Hangzhou">
+    <meta name="keywords" content="Jay, designer, product designer, UX designer, UI designer, visual designer, design, product design, UX, UI, UX design, UI design, mobile design, IA, information architecture, usability, portfolio">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link type="text/css" rel="stylesheet" href="index.css?v=1">
+    <link type="text/css" rel="stylesheet" href="HelveticaNeue/HelveticaNeue.css">
+    <link rel="stylesheet" href="Proximanova/proximanova.css" type="text/css">
+    <script type="text/javascript">
+        function blockMove() {
+            event.preventDefault() ;
+        }
+    </script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.lazyload.js"></script>
+    <script type="text/javascript">
+        //For making main image 100% window height.
+        //<![CDATA[
+        $(window).load(function(){
+            vph = $(window).height();
+
+            $('.intro').height(vph);
+        });//]]>
+    </script>
+    <script type="text/javascript">
+
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+            document.body.style.overflow = 'auto';
+            var delay2=1200;
+            setTimeout(function(){
+                document.getElementById('logo').className='visible';
+            }, delay2);
+            var delay4=1500;
+            setTimeout(function(){
+                document.getElementById('layer1').className='firsttime';
+            }, delay4);
+
+
+            document.body.ontouchmove='';
+        })
+    </script>
+    <script type="text/javascript">
+        function tog_menu() {
+            var ide = document.getElementById('menu_button');
+            var ide2 = document.getElementById('menu');
+            ide.className = ide.className == "menu_button" ? "menu_button active" : "menu_button";
+            ide2.className = ide2.className == "menu_container visible" ? "menu_container" : "menu_container visible";
+        }
+        function tog_timeline() {
+            var ide = document.getElementById('timeline_flip');
+            var ide2 = document.getElementById('flip');
+            ide.className = ide.className == "timeline" ? "timeline reverse" : "timeline";
+            ide2.className = ide2.className == "flip" ? "flip click" : "flip";
+        }
+    </script>
+    <script type="text/javascript">
+        // Switch navigation item classes depending on sroll position
+        $(window).load(function(){
+            $(document).ready(function () {
+                $(document).on("scroll", onScroll);
+
+                //smoothscroll
+                $('a[href^="#"]').on('click', function (e) {
+                    e.preventDefault();
+                    $(document).off("scroll");
+
+                    $('a').each(function () {
+                        $(this).removeClass('active');
+                    })
+                    $(this).addClass('active');
+
+                    var target = this.hash,
+                        menu = target;
+                    $target = $(target);
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top+2
+                    }, 500, 'swing', function () {
+                        window.location.hash = target;
+                        $(document).on("scroll", onScroll);
+                    });
+                });
+            });
+
+            function onScroll(event){
+                var scrollPos = $(document).scrollTop();
+                $('#menu a').each(function () {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('#menu li a').removeClass("active");
+                        currLink.addClass("active");
+                    }
+                    else{
+                        currLink.removeClass("active");
+                    }
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript" language="javascript">
+        //Blur in parallax.js
+        //<![CDATA[
+        $('html').on('touchstart', function(e) {
+            document.getElementById('layer1').className='';
+        })
+
+        function blur_on() {
+            document.getElementById('layer1').className='blur_high';
+        }
+
+        function blur_off() {
+            document.getElementById('layer1').className='';
+        }
+
+        //]]>
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63866051-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Jay的个人博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+<body ontouchmove="blockMove()">
+<div class="loader">
+    <div id="loader"></div>
 </div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jay Fan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jay的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/08/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T13:39:46+08:00">
-                2018-09-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
+<div class="intro">
+    <div id="container" class="container">
+        <ul id="scene" class="scene">
+            <li class="layer" data-depth="0.05"><span id="layer1" class="firsttime blur_high"></span></li>
+        </ul>
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Jay Fan</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jay Fan</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+    <h1 id="logo">Jay Fan</h1>
+    <a class="scroll" href="#whatido"><span>Scroll down</span></a> </div>
+<script src="parallax-master/deploy/parallax.js"></script>
+<script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
 </script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+<section id="whatido" class="limit">
+    <div class="photo"><a href="blog/"><img src="images/photo_animated.gif" alt="Fans"/></a></div>
+    <div class="main_title">目前定居在杭州<br>
+        <span>专注于 UX design 领域...</span></div>
+    <div class="summary">
+        <div class="sum">
+            <h3>Education</h3>
+            本科毕业于宁波大学，主修工业设计专业，擅长产品造型设计和人机工程方向；研究生毕业于华东理工大学，主修用户体验研究，擅长用户研究，竞品分析，交互设计等方向的设计方法。</div>
+        <div class="sum">
+            <h3>WORK</h3>
+            先后供职于设计咨询公司和吉利汽车的车联网事业部，期间有过2年的创业经历，服务过Samsung，Intel，长虹，华为等国内外大品牌项目，有金融，电商，社交，智能设备等行业实践经验，具有丰富的项目管理和多个产品上线经验。
+        </div>
+        <div class="sum">
+            <h3>EXPLORER</h3>
+            对新技术和商业模式充满浓厚的兴趣，喜欢研究新产品和分析设计趋势，不断学习消化多方设计案例，整理自我实践经验转化为系统的设计方法，偶尔在行业论坛发表设计观点，加强自身学习能力。</div>
+    </div>
+</section>
+<section class="limit" id="timeline">
+    <!--<div class="sum section">
+        <h3>Timeline</h3>
+    </div>-->
+    <a href="javascript:void(0);" onClick="tog_timeline()" class="flip" id="flip"><b></b><span>Reverse timeline</span></a>
+    <div class="timeline" id="timeline_flip">
+        <div class="gradient"></div>
+        <div class="year">2018</div>
+        <div class="event_container">
+            <div class="event personal"><div class="date">2018</div> <i></i> GKUI应用商城设计&管理后台项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>管理后台</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2018</div> <i></i>XCall坐席管理平台项目<br/>
+                <span>交互设计师</span>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>管理后台</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2018</div> <i></i> 吉利公益小程序<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>MOBILE</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event personal"><div class="date">2018</div> <i></i> GKAI智能手表交互设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>智能设备</b></div>
+            </div>
+        </div>
+        <div class="year">2017年</div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2017</div> <i></i> TSP<br/>
+                <span>车型设备库管理平台项目</span>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>管理后台</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2017</div> <i></i> G-netlink app v1.7.0改版项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>DESIGN LEAD</b><b>UX/UI</b><b>MOBILE</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event personal"><div class="date">2017</div> <i></i> 天真蓝app设计服务项目<br/>
+                <span>UX/UI designer</span>
+                <div class="tags"><b>UX/UI</b><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+        <div class="year">2016年</div>
+
+        <div class="event_container">
+            <div class="event relocation"><div class="date">2016</div> <i></i> 公司自品牌创新设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2016</div> <i></i> 咪咕视讯app创新项目<br/>
+                <span>UX/UI designer</span>
+                <div class="tags"><b>UX/UI</b><b>MOBILE</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2016</div> <i></i> 中国文艺家官网项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>WEB DESIGN</b><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+
+        <div class="year">2015年</div>
+
+
+        <div class="event_container">
+            <div class="event work"><div class="date">2015</div> <i></i> 宇视UX创新项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>USER RESEARCH</b><b>UX</b><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event personal"><div class="date">2015</div> <i></i> 长虹官网设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>WEB DESIGN</b><b>UX</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event relocation"><div class="date">2015</div> <i></i> 华为监控产品设计项目<br/>
+                <span>UX/UI designer</span>
+                <div class="tags"><b>UX/UI</b><b>USER RESEARCH</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2015</div> <i></i> 澳门百家乐用户研究创新项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>USER RESEARCH</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2015</div> <i></i> Speaker音响UX创新设计项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>UX/UI</b><b>USER RESEARCH</b></div>
+            </div>
+        </div>
+        <div class="year">2014年</div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2014</div> <i></i> 吉利康迪汽车中控屏交互设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX/UI</b><b>智能设备</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2014</div> <i></i> 美疯啦app设计项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>MOBILE</b><b>UX/UI</b><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+
+        <div class="event_container">
+            <div class="event relocation"><div class="date">2014</div> <i></i> 欧琳厨房产品创新设计<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>UX/UI</b><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2014</div> <i></i> Samsung上海吸尘器用户研究创新项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>USER RESEARCH</b><b>PRINT</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2014</div> <i></i> 65daigou代购官网设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>WEB DESIGN</b></div>
+            </div>
+        </div>
+        <div class="year">2013年</div>
+        <div class="event_container">
+            <div class="event personal"><div class="date">February 2010</div> <i></i> Samsung上海智能穿戴设备UX创新设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX/UI</b><b>PRINT</b><b>DESIGN LEAD</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event work"><div class="date">2013</div> <i></i> Samsung南京S4手机用户测试项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX/UI</b><b>MOBILE</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event education"><div class="date">2013</div> <i></i> Intel上海新技术应用UX创新项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>USER RESEARCH</b><b>PRODUCT DESIGN</b></div>
+            </div>
+        </div>
+        <div class="event_container">
+            <div class="event relocation"><div class="date">2013</div> <i></i> Samsung北京空气净化器UX创新设计项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>USER RESEARCH</b><b>PRINT</b><b>PRODUCT DESIGN</b></div>
+            </div>
+        </div>
+        <div class="year">2013</div>
+    </div>
+    <script language="javascript">
+        (function($) {
+            $.fn.visible = function(partial) {
+
+                var $t            = $(this),
+                    $w            = $(window),
+                    viewTop       = $w.scrollTop(),
+                    viewBottom    = viewTop + $w.height(),
+                    _top          = $t.offset().top,
+                    _bottom       = _top + $t.height(),
+                    compareTop    = partial === true ? _bottom : _top,
+                    compareBottom = partial === true ? _top : _bottom;
+
+                return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+            };
+
+        })(jQuery);
+
+        var win = $(window);
+
+        var allMods = $(".event_container");
+
+        allMods.each(function(i, el) {
+            var el = $(el);
+            if (el.visible(true)) {
+                el.addClass("already-visible");
+            }
+        });
+
+        win.scroll(function(event) {
+
+            allMods.each(function(i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.addClass("come-in");
+                }
+            });
+
+        });
+    </script>
+</section>
+<section id="work">
+    <div class="sum section">
+        <div>
+            <h3>Work</h3>
+        </div>
+    </div>
+    <ul class="gallery works">
+        <li style="background:#c8e2f0;">
+            <div class="spinner"></div>
+            <a href="https://www.behance.net/gallery/48680921/Amazfit-v20" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/amazfit_pairing.gif" alt="Amazfit iOS App V2.0">
+                <div class="gallery_overlay">
+                    <div class="gallery_text">
+                        <h3>可穿戴设备-20170729</h3>
+                        <p>UX/UI</p>
+                    </div>
+                </div>
+            </a></li>
+        <li style="background:#ffa000;">
+            <div class="spinner"></div>
+            <a href="https://www.behance.net/gallery/42367673/Amazfit-v10" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/amazfit.png" alt="Amazfit iOS App V1.0">
+                <div class="gallery_overlay">
+                    <div class="gallery_text">
+                        <h3>intel-voice-20180731</h3>
+                        <p>UX/UI</p>
+                    </div>
+                </div>
+            </a></li>
+        <li style="background:#e5eaee;">
+            <div class="spinner"></div>
+            <a href="https://dribbble.com/shots/1903238-Activity-tracking-app-dashboard-interaction?list=users&offset=6" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/scroll-animation_dribbble.gif" alt="Onetouch Move dashboard">
+                <div class="gallery_overlay">
+                    <div class="gallery_text">
+                        <h3>美疯啦-20180807</h3>
+                        <p>UX/UI</p>
+                    </div>
+                </div>
+            </a></li>
+        <li style="background:#63639f;">
+            <div class="spinner"></div>
+            <a href="https://dribbble.com/shots/2094177-Babbler" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/babbler.jpg" alt="Babbler iPhone app">
+                <div class="gallery_overlay">
+                    <div class="gallery_text">
+                        <h3>宇视项目-20180731</h3>
+                        <p>UX/UI</p>
+                    </div>
+                </div>
+            </a></li>
+        <li style="background:#bbc5ce;">
+            <div class="spinner"></div>
+            <a href="https://dribbble.com/shots/2276673-Onetouch-Move-App" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/onetouchmove_presentation.jpg" alt="Onetouch Move App">
+                <div class="gallery_overlay">
+                    <div class="gallery_text">
+                        <h3>宇视项目-20180731</h3>
+                        <p>UX/UI</p>
+                    </div>
+                </div>
+            </a></li>
+        <li style="background:#ffb8b8;">
+            <div class="spinner"></div>
+            <a href="https://dribbble.com/shots/2923867-Clean-Air-Vehicle-Decals-Redesign" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/hov.png" alt="Clean Air Vehicle Decals Redesign">
+                <div class="gallery_overlay">
+                    <div class="gallery_text">
+                        <h3>G-netlink App v1.7.0-20180728</h3>
+                        <p>UX/UI</p>
+                    </div>
+                </div>
+            </a></li>
+    </ul>
+</section>
+<section id="contacts">
+    <div class="email"><a href="mailto:18801796806@163.com"><span></span>18801796806@163.com<i><em>&laquo;见天地，见众生，见自己&raquo;</em><br/></i></a></div>
+    <div class="social_container">
+        <a href="https://jayleader.github.io/blog/" target="_blank" class="social twitter"><span>博客</span></a>
+        <a href="mailto:18801796806@163.com" target="_blank" class="social linkedin"><span>邮箱</span></a>
+    </div>
+</section>
+<section class="copy"> Designed and built by Jay with HTML5, CSS3, JQuery </section>
+<a href="javascript:void(0);" id="menu_button" class="menu_button" onClick="tog_menu();">
+	<span class="menu_line menu_line_top">
+    	<span class="menu_line_in imenu_line_in_top"></span>
+    </span>
+    <span class="menu_line menu_line_bottom">
+    	<span class="menu_line_in menu_line_in_bottom"></span>
+    </span>
+</a>
+<div class="menu_container" id="menu">
+    <div class="menu_container_in">
+        <ul class="menu">
+            <li><a href="#whatido" onClick="tog_menu()">About</a></li>
+            <li><a href="#timeline" onClick="tog_menu()">Timeline</a></li>
+            <li><a href="#work" onClick="tog_menu()">Work</a></li>
+            <li><a href="#contacts" onClick="tog_menu()">Contact me</a></li>
+        </ul>
+        <div class="social_container">
+            <a href="https://jayleader.github.io/blog/" target="_blank" class="social_menu twitter"><span>博客</span></a>
+            <a href="mailto:18801796806@163.com" target="_blank" class="social_menu medium"><span>邮箱</span></a>
+        </div>
+    </div>
+</div>
+<script>
+    $("img.lazy").lazyload({
+
+    });
+</script>
 </body>
 </html>
