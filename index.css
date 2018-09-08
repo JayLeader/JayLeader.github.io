@@ -1068,7 +1068,7 @@ section#timeline {
 	border-top: 1px solid #eee;
 }
 .gallery {
-	display: block;
+	/*display: block;*/
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -1076,6 +1076,9 @@ section#timeline {
 	width: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 .gallery:after {
 	content: '.';
@@ -1195,7 +1198,7 @@ section#timeline {
 
 @media screen and (min-width : 1441px) {
 #layer1 {
-	background-image: url(images/bg_layer1_2.jpg) !important;
+	background-image: url(images/bg_layer1_2.png) !important;
 }
 .gallery li {
 	width: 20%;
@@ -1300,17 +1303,6 @@ section#timeline {
 .scroll {
 	display: none !important;
 }
-#layer1 {
-	background-image: url(images/bg_layer1_ipad_hor2.jpg) !important;
-	background-image: -webkit-image-set( url(images/bg_layer1_ipad_hor_1x.jpg) 1x, url(images/bg_layer1_ipad_hor2.jpg) 2x ) !important;
-	background-image: image-set( url(images/bg_layer1_ipad_hor_1x.jpg) 1x, url(images/bg_layer1_ipad_hor2.jpg) 2x ) !important;
-}
-#layer2 {
-	background-size: 50% !important;
-}
-#layer3 img {
-	width: 18% !important;
-}
 .intro_text_in2 {
 	padding: 0 50px 20px 50px !important;
 }
@@ -1338,15 +1330,7 @@ section#timeline {
 	filter: blur(0) !important;
 }
 #layer1 {
-	background-image: url(images/bg_layer1_smartphone2.jpg);
-	background-image: -webkit-image-set( url(images/bg_layer1_smartphone_old2.jpg) 1x, url(images/bg_layer1_smartphone2.jpg) 2x );
-	background-image: image-set( url(images/bg_layer1_smartphone_old2.jpg) 1x, url(images/bg_layer1_smartphone2.jpg) 2x );
-}
-#layer2 {
-	display: none;
-}
-#layer3 {
-	display: none;
+	background-image: url(images/bg_layer1_smartphone2.png);
 }
 .email a {
 	background-size: 280px 280px !important;
@@ -1367,9 +1351,7 @@ section#timeline {
 	display: none;
 }
 #layer1 {
-	background-image: url(images/bg_layer1_smartphone2.jpg);
-	background-image: -webkit-image-set( url(images/bg_layer1_smartphone_old2.jpg) 1x, url(images/bg_layer1_smartphone2.jpg) 2x );
-	background-image: image-set( url(images/bg_layer1_smartphone_old2.jpg) 1x, url(images/bg_layer1_smartphone2.jpg) 2x );
+	background-image: url(images/bg_layer1_smartphone2.png);
 }
 #layer3 img {
 	bottom: -5%;
@@ -1465,13 +1447,7 @@ section#timeline {
 /* iPads ----------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 #layer1 {
-	background-image: url(images/bg_layer1_2.jpg);
-	background-image: -webkit-image-set( url(images/bg_layer1_1x.jpg) 1x, url(images/bg_layer1_2.jpg) 2x );
-	background-image: image-set( url(images/bg_layer1_1x.jpg) 1x, url(images/bg_layer1_2.jpg) 2x );
-}
-#layer2 {
-	background-image: url(images/bg_layer2_ipad.png);
-	background-size: 50%;
+	background-image: url(images/bg_layer1_2.png);
 }
 #layer3 img {
 	width: 20%;
@@ -1542,9 +1518,7 @@ section#timeline {
 	max-width: 1024px;
 }
 #layer1 {
-	background-image: url(images/bg_layer1_2.jpg);
-	background-image: -webkit-image-set( url(images/bg_layer1_1x.jpg) 1x, url(images/bg_layer1_2.jpg) 2x );
-	background-image: image-set( url(images/bg_layer1_1x.jpg) 1x, url(images/bg_layer1_2.jpg) 2x );
+	background-image: url(images/bg_layer1_2.png);
 }
 .sum {
 	padding: 0 30px;

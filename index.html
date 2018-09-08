@@ -10,16 +10,16 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="index.css?v=9" type="text/css">
-    <link rel="stylesheet" href="HelveticaNeue/HelveticaNeue.css" type="text/css">
-    <link rel="stylesheet" href="ProximaNova/proximanova.css" type="text/css">
-    <link rel="stylesheet prefetch" href="flickity.css">
+    <link type="text/css" rel="stylesheet" href="index.css?v=1">
+    <link type="text/css" rel="stylesheet" href="HelveticaNeue/HelveticaNeue.css">
+    <link rel="stylesheet" href="Proximanova/proximanova.css" type="text/css">
     <script type="text/javascript">
         function blockMove() {
             event.preventDefault() ;
         }
     </script>
     <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.lazyload.js"></script>
     <script type="text/javascript">
         //For making main image 100% window height.
         //<![CDATA[
@@ -41,8 +41,6 @@
             var delay4=1500;
             setTimeout(function(){
                 document.getElementById('layer1').className='firsttime';
-                document.getElementById('layer2').className='firsttime blur_medium';
-                document.getElementById('layer3').className='firsttime blur_high';
             }, delay4);
 
 
@@ -112,23 +110,14 @@
         //<![CDATA[
         $('html').on('touchstart', function(e) {
             document.getElementById('layer1').className='';
-            document.getElementById('layer2').className='blur_medium';
-            document.getElementById('layer3').className='blur_high';
         })
-        $("#layer3_img").on('touchstart',function(e) {
-            e.stopPropagation();
-        });
 
         function blur_on() {
             document.getElementById('layer1').className='blur_high';
-            document.getElementById('layer2').className='blur_low';
-            document.getElementById('layer3').className='';
         }
 
         function blur_off() {
             document.getElementById('layer1').className='';
-            document.getElementById('layer2').className='blur_medium';
-            document.getElementById('layer3').className='blur_high';
         }
 
         //]]>
@@ -188,42 +177,68 @@
         <div class="gradient"></div>
         <div class="year">2018</div>
         <div class="event_container">
-            <div class="event personal"><div class="date">2018</div> <i></i> GKUI应用商城设计&管理后台项目<br/></div>
+            <div class="event personal"><div class="date">2018</div> <i></i> GKUI应用商城设计&管理后台项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>管理后台</b></div>
+            </div>
         </div>
         <div class="event_container">
             <div class="event work"><div class="date">2018</div> <i></i>XCall坐席管理平台项目<br/>
                 <span>交互设计师</span>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>管理后台</b></div>
             </div>
         </div>
         <div class="event_container">
-            <div class="event education"><div class="date">2018</div> <i></i> 吉利公益小程序</div>
+            <div class="event education"><div class="date">2018</div> <i></i> 吉利公益小程序<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>MOBILE</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event personal"><div class="date">2018</div> <i></i> GKAI智能手表交互设计项目</div>
+            <div class="event personal"><div class="date">2018</div> <i></i> GKAI智能手表交互设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>智能设备</b></div>
+            </div>
         </div>
         <div class="year">2017年</div>
         <div class="event_container">
             <div class="event work"><div class="date">2017</div> <i></i> TSP<br/>
                 <span>车型设备库管理平台项目</span>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>管理后台</b></div>
             </div>
         </div>
         <div class="event_container">
-            <div class="event education"><div class="date">2017</div> <i></i> G-netlink app v1.7.0改版项目</div>
+            <div class="event education"><div class="date">2017</div> <i></i> G-netlink app v1.7.0改版项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>DESIGN LEAD</b><b>UX/UI</b><b>MOBILE</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event personal"><div class="date">2017</div> <i></i> 天真蓝app设计服务项目</div>
+            <div class="event personal"><div class="date">2017</div> <i></i> 天真蓝app设计服务项目<br/>
+                <span>UX/UI designer</span>
+                <div class="tags"><b>UX/UI</b><b>DESIGN LEAD</b></div>
+            </div>
         </div>
         <div class="year">2016年</div>
 
         <div class="event_container">
-            <div class="event relocation"><div class="date">2016</div> <i></i> 公司自品牌创新设计项目<br/></div>
+            <div class="event relocation"><div class="date">2016</div> <i></i> 公司自品牌创新设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>DESIGN LEAD</b></div>
+            </div>
         </div>
         <div class="event_container">
             <div class="event work"><div class="date">2016</div> <i></i> 咪咕视讯app创新项目<br/>
+                <span>UX/UI designer</span>
+                <div class="tags"><b>UX/UI</b><b>MOBILE</b></div>
             </div>
         </div>
         <div class="event_container">
             <div class="event education"><div class="date">2016</div> <i></i> 中国文艺家官网项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>WEB DESIGN</b><b>DESIGN LEAD</b></div>
             </div>
         </div>
 
@@ -232,60 +247,89 @@
 
         <div class="event_container">
             <div class="event work"><div class="date">2015</div> <i></i> 宇视UX创新项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>USER RESEARCH</b><b>UX</b><b>DESIGN LEAD</b></div>
             </div>
         </div>
         <div class="event_container">
-            <div class="event personal"><div class="date">2015</div> <i></i> 长虹官网设计项目<br/></div>
+            <div class="event personal"><div class="date">2015</div> <i></i> 长虹官网设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>WEB DESIGN</b><b>UX</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event relocation"><div class="date">2015</div> <i></i> 华为监控产品设计项目<br/></div>
+            <div class="event relocation"><div class="date">2015</div> <i></i> 华为监控产品设计项目<br/>
+                <span>UX/UI designer</span>
+                <div class="tags"><b>UX/UI</b><b>USER RESEARCH</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event education"><div class="date">2015</div> <i></i> 澳门百家乐用户研究创新项目<br/></div>
+            <div class="event education"><div class="date">2015</div> <i></i> 澳门百家乐用户研究创新项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>USER RESEARCH</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event work"><div class="date">2015</div> <i></i> Speaker音响UX创新设计项目<br/></div>
+            <div class="event work"><div class="date">2015</div> <i></i> Speaker音响UX创新设计项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>UX/UI</b><b>USER RESEARCH</b></div>
+            </div>
         </div>
         <div class="year">2014年</div>
         <div class="event_container">
-            <div class="event education"><div class="date">2014</div> <i></i> 吉利康迪汽车中控屏交互设计项目<br/></div>
+            <div class="event education"><div class="date">2014</div> <i></i> 吉利康迪汽车中控屏交互设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX/UI</b><b>智能设备</b></div>
+            </div>
         </div>
         <div class="event_container">
             <div class="event work"><div class="date">2014</div> <i></i> 美疯啦app设计项目<br/>
-                <span>UX designer</span>
-                <div class="tags"><b>UX/UI</b><b>visual design</b></div>
+                <span>Product designer</span>
+                <div class="tags"><b>MOBILE</b><b>UX/UI</b><b>DESIGN LEAD</b></div>
             </div>
         </div>
 
         <div class="event_container">
-            <div class="event relocation"><div class="date">2014</div> <i></i> 欧琳厨房产品创新设计<br/></div>
+            <div class="event relocation"><div class="date">2014</div> <i></i> 欧琳厨房产品创新设计<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>UX/UI</b><b>DESIGN LEAD</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event education"><div class="date">2014</div> <i></i> Samsung上海吸尘器用户研究创新项目<br/></div>
+            <div class="event education"><div class="date">2014</div> <i></i> Samsung上海吸尘器用户研究创新项目<br/>
+                <span>Product designer</span>
+                <div class="tags"><b>USER RESEARCH</b><b>PRINT</b></div>
+            </div>
         </div>
         <div class="event_container">
-            <div class="event work"><div class="date">2014</div> <i></i> 65daigou代购官网设计项目<br/></div>
+            <div class="event work"><div class="date">2014</div> <i></i> 65daigou代购官网设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX</b><b>WEB DESIGN</b></div>
+            </div>
         </div>
         <div class="year">2013年</div>
         <div class="event_container">
-            <div class="event personal"><div class="date">February 2010</div> <i></i> Samsung上海智能穿戴设备UX创新设计项目<br/></div>
+            <div class="event personal"><div class="date">February 2010</div> <i></i> Samsung上海智能穿戴设备UX创新设计项目<br/>
+                <span>UX designer</span>
+                <div class="tags"><b>UX/UI</b><b>PRINT</b><b>DESIGN LEAD</b></div>
+            </div>
         </div>
         <div class="event_container">
             <div class="event work"><div class="date">2013</div> <i></i> Samsung南京S4手机用户测试项目<br/>
-                <span>Product designer</span>
-                <div class="tags"><b>Design lead</b><b>UX/UI</b><b>visual design</b><b>identity</b><b>web design</b><b>print</b><b>front-end</b><b>flash</b><b>mobile</b><b>Saas</b><b>driver</b><b>cook</b><b>office manager</b></div>
+                <span>UX designer</span>
+                <div class="tags"><b>UX/UI</b><b>MOBILE</b></div>
             </div>
         </div>
         <div class="event_container">
             <div class="event education"><div class="date">2013</div> <i></i> Intel上海新技术应用UX创新项目<br/>
                 <span>Product designer</span>
-                <div class="tags"><b>Design lead</b><b>UX/UI</b><b>visual design</b><b>identity</b><b>web design</b><b>print</b><b>front-end</b><b>flash</b><b>mobile</b><b>Saas</b><b>driver</b><b>cook</b><b>office manager</b></div>
+                <div class="tags"><b>USER RESEARCH</b><b>PRODUCT DESIGN</b></div>
             </div>
         </div>
         <div class="event_container">
             <div class="event relocation"><div class="date">2013</div> <i></i> Samsung北京空气净化器UX创新设计项目<br/>
                 <span>Product designer</span>
-                <div class="tags"><b>Design lead</b><b>UX/UI</b><b>visual design</b><b>identity</b><b>web design</b><b>print</b><b>front-end</b><b>flash</b><b>mobile</b><b>Saas</b><b>driver</b><b>cook</b><b>office manager</b></div>
+                <div class="tags"><b>USER RESEARCH</b><b>PRINT</b><b>PRODUCT DESIGN</b></div>
             </div>
         </div>
         <div class="year">2013</div>
@@ -339,23 +383,13 @@
         </div>
     </div>
     <ul class="gallery works">
-        <li style="background:#FFF;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/3897022-Motorcycle-Instrument-Concept" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/motorcycle_instrument.gif" alt="Motorcycle Instrument Concept">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Motorcycle Instrument Concept</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
         <li style="background:#c8e2f0;">
             <div class="spinner"></div>
             <a href="https://www.behance.net/gallery/48680921/Amazfit-v20" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/amazfit_pairing.gif" alt="Amazfit iOS App V2.0">
                 <div class="gallery_overlay">
                     <div class="gallery_text">
-                        <h3>Amazfit iOS App V2.0</h3>
-                        <p>UX/UI design</p>
+                        <h3>可穿戴设备-20170729</h3>
+                        <p>UX/UI</p>
                     </div>
                 </div>
             </a></li>
@@ -364,100 +398,7 @@
             <a href="https://www.behance.net/gallery/42367673/Amazfit-v10" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/amazfit.png" alt="Amazfit iOS App V1.0">
                 <div class="gallery_overlay">
                     <div class="gallery_text">
-                        <h3>Amazfit iOS App V1.0</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#ffb8b8;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2923867-Clean-Air-Vehicle-Decals-Redesign" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/hov.png" alt="Clean Air Vehicle Decals Redesign">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Clean Air Vehicle Decals Redesign</h3>
-                        <p>Visual design</p>
-                    </div>
-                </div>
-            </a></li>
-
-        <li style="background:#080808;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2239228-Saturn-Satellite" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/saturn.gif" alt="Saturn Satellite">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Saturn Satellite</h3>
-                        <p>Visual/motion design</p>
-                    </div>
-                </div>
-            </a></li>
-
-
-        <li style="background:#1e1e1e;">
-            <div class="spinner"></div>
-            <a href="https://www.behance.net/gallery/28768621/Alcatel-Watch-UX" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/watch_diagram.jpg" alt="Alcatel Watch UX">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Alcatel Watch</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#292a2c;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2156617-Alcatel-Launcher-App-Icons" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/alcatel-icons.jpg" alt="Alcatel Icons">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Alcatel Icons</h3>
-                        <p>Visual design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#d1e7f2;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2221284-Shanghai" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/shanghai.png" alt="Shanghai Illustration">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Shanghai</h3>
-                        <p>Illustration</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#d9dee2;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2145502-Shopping-Card-Rebound" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/shopping_card.jpg" alt="Shopping Card">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Shopping Card</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#63639f;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2094177-Babbler" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/babbler.jpg" alt="Babbler iPhone app">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Babbler iPhone app</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#bce7ff;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2078859-Alcatel-Watch-Tutorial-Interactive-Prototype?list=users&offset=0" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/onetouchmove_onboarding3.gif" alt="Alcatel Watch Tutorial">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Alcatel Watch Tutorial</h3>
-                        <p>UX/UI, prototype</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#bbc5ce;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/2276673-Onetouch-Move-App" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/onetouchmove_presentation.jpg" alt="Onetouch Move App">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Onetouch Move App</h3>
+                        <h3>intel-voice-20180731</h3>
                         <p>UX/UI</p>
                     </div>
                 </div>
@@ -467,505 +408,48 @@
             <a href="https://dribbble.com/shots/1903238-Activity-tracking-app-dashboard-interaction?list=users&offset=6" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/scroll-animation_dribbble.gif" alt="Onetouch Move dashboard">
                 <div class="gallery_overlay">
                     <div class="gallery_text">
-                        <h3>Onetouch Move dashboard</h3>
-                        <p>UX/UI, animation</p>
+                        <h3>美疯啦-20180807</h3>
+                        <p>UX/UI</p>
                     </div>
                 </div>
             </a></li>
-        <li style="background:#2a186b;">
+        <li style="background:#63639f;">
             <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1856026-Treadmill-control-based-on-tablet-Workout-screen?list=users&offset=8" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/treadmill.jpg" alt="Treadmill control">
+            <a href="https://dribbble.com/shots/2094177-Babbler" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/babbler.jpg" alt="Babbler iPhone app">
                 <div class="gallery_overlay">
                     <div class="gallery_text">
-                        <h3>Treadmill control</h3>
-                        <p>UX/UI design</p>
+                        <h3>宇视项目-20180731</h3>
+                        <p>UX/UI</p>
                     </div>
                 </div>
             </a></li>
-        <li style="background:#1c0d06;">
+        <li style="background:#bbc5ce;">
             <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1839587-Android-Wear-Calendar-Events?list=users&offset=9" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/watch_events.jpg" alt="Calendar watch face">
+            <a href="https://dribbble.com/shots/2276673-Onetouch-Move-App" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/onetouchmove_presentation.jpg" alt="Onetouch Move App">
                 <div class="gallery_overlay">
                     <div class="gallery_text">
-                        <h3>Calendar watch face</h3>
-                        <p>UX/UI design</p>
+                        <h3>宇视项目-20180731</h3>
+                        <p>UX/UI</p>
                     </div>
                 </div>
             </a></li>
-        <li style="background:#181329;">
+        <li style="background:#ffb8b8;">
             <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1834948-Weather-cases?list=users&offset=10" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/wave_weather.jpg" alt="Alcatel Watch weather">
+            <a href="https://dribbble.com/shots/2923867-Clean-Air-Vehicle-Decals-Redesign" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/hov.png" alt="Clean Air Vehicle Decals Redesign">
                 <div class="gallery_overlay">
                     <div class="gallery_text">
-                        <h3>Alcatel Watch weather</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#4d3a33;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1825737-Smart-Watch-Fitness-app?list=users&offset=12" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/watch_fitness.jpg" alt="Fitness watch face">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Fitness watch face</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#ccdef0;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1726255-Music-Player?list=users&offset=13" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/music_player.jpg" alt="Music player app">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Music player app</h3>
-                        <p>UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#000;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1724400-Apple-Watch-Time-Experiment" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/applewatch.jpg" alt="Watch face concept">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Watch face concept</h3>
-                        <p>Visual design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#171717;">
-            <div class="spinner"></div>
-            <a href="https://www.behance.net/gallery/13674335/Mysterious-Activity-Tracking-App" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/fitness.jpg" alt="Activity tracking app">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Activity tracking app</h3>
-                        <p>UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#05070c;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1683159-Interview-task-at-Railsware" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/railsware.jpg" alt="MacOS app">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>MacOS app</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#000;">
-            <div class="spinner"></div>
-            <a href="https://www.behance.net/gallery/12880781/BoldKit-UX-and-Design" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/boldkit.jpg" alt="Boldkit.com > My Videos">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Boldkit.com > My Videos</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#000;">
-            <div class="spinner"></div>
-            <a href="https://www.behance.net/gallery/12354511/BMW-Car-Dashboard-Design" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/bmw2.jpg" alt="BMW dashboard">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>BMW dashboard</h3>
-                        <p>UI design</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#FFF;">
-            <div class="spinner"></div>
-            <a href="https://dribbble.com/shots/1677510-Ad-Campaign-Dashboard" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/ad_campaign_dashboard.jpg" alt="Ad campaign dashboard">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Ad campaign dashboard</h3>
-                        <p>UX/UI design</p>
-                    </div>
-                </div>
-            </a></li>
-
-        <!--<li style="background:#1e1711;">
-          <div class="spinner"></div>
-          <a href="https://dribbble.com/shots/1709037-Time-Widget-for-Android" target="_blank"><img class="lazy" src="images/spacer_work.gif" src="images/spacer.gif" data-original="work/time_widget.jpg" alt="Clock widget for Android">
-          <div class="gallery_overlay">
-            <div class="gallery_text">
-              <h3>Clock widget for Android</h3>
-              <p>UX/UI design</p>
-            </div>
-          </div>
-          </a></li>
-          <li style="background:#4947ab;">
-          <div class="spinner"></div>
-          <a href="https://dribbble.com/shots/1574367-Thanks-for-Invite-Dumbwaiter" target="_blank"><img class="lazy" src="images/spacer_work.gif" data-original="work/invite_thanks.gif" alt="Thanks for invite">
-          <div class="gallery_overlay">
-            <div class="gallery_text">
-              <h3>Thanks for invite</h3>
-              <p>UI, animation</p>
-            </div>
-          </div>
-          </a></li> -->
-    </ul>
-    <div class="viewall">View more projects on <a href="https://dribbble.com/dnevozhai" target="_blank">dribbble</a> and <a href="https://behance.net/dnevozhai" target="_blank">behance</a>.</div>
-
-    <!-- Flickity HTML init -->
-    <div class="gallery js-flickity"
-         data-flickity-options='{ "autoPlay": 2000, "contain": true, "prevNextButtons": true, "pageDots": false, "selectedAttraction": 0.01,
-"friction": 0.15, "freeScroll": false, "wrapAround": true, "arrowShape": "M 15,50 L 60,95 L 65,90 L 25,50  L 65,10 L 60,5 Z"  }'>
-
-        <div class="achievement">
-            <div class="ach_logo webby"></div>
-            <div class="ach_text"><strong>Webby Awards 2017 - Best UI Nominee</strong><br/>
-                <a href="https://www.webbyawards.com/winners/2017/mobile-sites-apps/features-categories/best-user-interface/amazfit-app/" target="_blank">Amazfit iOS app</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo webby"></div>
-            <div class="ach_text"><strong>Webby Awards 2017 - Best health app Nominee</strong><br/>
-                <a href="https://www.webbyawards.com/winners/2017/mobile-sites-apps/general-sites-apps/health/amazfit-app/" target="_blank">Amazfit iOS app</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo muse"></div>
-            <div class="ach_text"><strong>Muse Creative Awards 2017  &ndash; Platinum Winner</strong><br/>
-                <a href="http://museaward.com/winners/4/239/814" target="_blank">Amazfit iOS app</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo lovie"></div>
-            <div class="ach_text"><strong>Lovie Awards 2017  &ndash; Best UI Winner</strong><br/>
-                <a href="http://winners.lovieawards.eu/#!y=2017&m=15" target="_blank">Amazfit iOS app</a>
-            </div>
-        </div>
-
-        <div class="achievement">
-            <div class="ach_logo itawards"></div>
-            <div class="ach_text"><strong>Ukrainian IT Awards</strong><br/>
-                <a href="http://itawards.ua/en/#winners" target="_blank">UI Designer of 2015</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo uda"></div>
-            <div class="ach_text"><strong>Ukrainian Design: the Very Best of 2016 &ndash; Winner (Mobile apps design)</strong><br/>
-                <a href="http://design-awards.com.ua/en/winner_one/2016/197/" target="_blank">Amazfit iOS App</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo uda"></div>
-            <div class="ach_text"><strong>Ukrainian Design: the Very Best of 2015 &ndash; Winner (Other interactive digital design)</strong><br/>
-                <a href="http://design-awards.com.ua/en/winner_one/2015/2314/" target="_blank">Alcatel Watch UX</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo uda"></div>
-            <div class="ach_text"><strong>Ukrainian Design: the Very Best of 2014 &ndash; Finalist (Concept)</strong><br/>
-                <a href="http://design-awards.com.ua/en/winner_one/2014/1873/" target="_blank">BMW Dashboard</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo webguru"></div>
-            <div class="ach_text"><strong>Web Guru Awards &ndash; Guru of the day</strong><br/>
-                <a href="http://webguruawards.com/user/details/DenysNevozhaipersonalwebsite-157" target="_blank">This web site</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo cssreel"></div>
-            <div class="ach_text"><strong>CSS Reel &ndash; Winner of the day</strong><br/>
-                <a href="http://cssreel.com/Website/denys-nevozhai" target="_blank">This web site</a>
-            </div>
-        </div>
-
-        <div class="achievement">
-            <div class="ach_logo smartime"></div>
-            <div class="ach_text"><strong>Smartime Award &ndash; Innovative App Design for Enterprise Winner</strong><br/>
-                <a href="http://www.jwpj.com/winning.htm" target="_blank">Onetouch Move mobile app</a></span>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo engadget"></div>
-            <div class="ach_text"><strong>Engadget &ndash; Best of CES 2015 Finalist</strong><br/>
-                <a href="http://www.engadget.com/2015/01/07/introducing-the-best-of-ces-2015-finalists/" target="_blank">Alcatel Watch</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo stuff"></div>
-            <div class="ach_text"><strong>Stuff &ndash; Wearable Tech Award Winner</strong><br/>
-                <a href="http://www.stuff.tv/ces-2015/ces-2015-stuff-wearable-tech-award-winners-announced/news" target="_blank">Alcatel Watch</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo tomsguide"></div>
-            <div class="ach_text"><strong>Tom's Guide &ndash; The Best New Tech Winner</strong><br/>
-                <a href="http://www.tomsguide.com/us/ces-awards-2015,news-20250.html" target="_blank">Alcatel Watch</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo be_appdesign"></div>
-            <div class="ach_text"><strong>Featured on Behance's Interaction Gallery</strong><br/>
-                <a href="https://www.behance.net/gallery/10365255/GoPro-App-Rethought" target="_blank">GoPro</a>, <a href="https://www.behance.net/gallery/10444887/Mobile-payments-widget-for-in-app-purchases" target="_blank">Mobillet</a>, <a href="https://www.behance.net/gallery/11855523/Invitation-page-for-a-car-sharing-service" target="_blank">IwyCar</a>, <a href="https://www.behance.net/gallery/42367673/Amazfit-v10?tracking_source=curated_galleries_list">Amazfit</a>, <a href="https://www.behance.net/gallery/48680921/Amazfit-v20?tracking_source=curated_galleries_list">Amazfit V2</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo be_pantone"></div>
-            <div class="ach_text"><strong>Featured on Behance's Pantone Canvas Gallery</strong><br/>
-                <a href="https://www.behance.net/gallery/28768621/Alcatel-Watch-UX" target="_blank">Alcatel Watch</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo ucsandiego"></div>
-            <div class="ach_text"><strong>UC San Diego &ndash; HCI Course Best Concept Winner</strong><br/>
-                Concept iOS app design
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo csswinner"></div>
-            <div class="ach_text"><strong>CSS Winner &ndash; Nominee</strong><br/>
-                <a href="http://www.csswinner.com/details/denys-nevozhai/9438" target="_blank">This web site</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo csslight"></div>
-            <div class="ach_text"><strong>CSS Light &ndash; Nominee</strong><br/>
-                <a href="http://www.csslight.com/website/12279/Denys-Nevozhai" target="_blank">This web site</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo cssnectar"></div>
-            <div class="ach_text"><strong>CSS Nectar &ndash; Nominee</strong><br/>
-                <a href="http://cssnectar.com/css-gallery-inspiration/denys-nevozhai/" target="_blank">This web site</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo cssfox"></div>
-            <div class="ach_text"><strong>CSS Fox &ndash; Nominee</strong><br/>
-                <a href="http://css-fox.com/denys-nevozhai/" target="_blank">This web site</a>
-            </div>
-        </div>
-        <div class="achievement">
-            <div class="ach_logo webby"></div>
-            <div class="ach_text"><strong>Webby Awards 2010 - Honoree</strong><br/>
-                <a href="http://www.webbyawards.com/winners/2010/web/general-website-categories/real-estate/rofocom-office-space-search-engine/" target="_blank">Rofo.com</a>
-            </div>
-        </div>
-
-    </div>
-    <script src="flickity.pkgd.js"></script>
-
-</section>
-
-    <div class="sum section">
-        <div>
-            <h3>Photography</h3>
-        </div>
-    </div>
-    <ul class="gallery photos">
-        <li style="background:#6c5350;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/01TkF5wJBW/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-29-21.04.44.jpg" alt="Dangling at the Edge">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Dangling at the Edge</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#593937;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/1Aa4waQJA-/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-02-20.17.33-2.jpg" alt="Pirates">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Pirates</h3>
-                        <p>Shenzhen, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#50516f;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/04u8gQwJA7/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-29-20.48.43-1.jpg" alt="Crazy laowai">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Crazy laowai</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#bea9a4;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/0kjrSDQJAz/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-14-16.28.11.jpg">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Future of the ballet scene</h3>
-                        <p>Guangzhou, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#a18aa5;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/1A-X2-wJDW/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-02-21.33.58-2.jpg" alt="Casual roofers">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Casual roofers</h3>
-                        <p>Shenzhen, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#4e4251;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/1Axv9kwJON/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-02-20.19.06.jpg" alt="Helipad">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Helipad</h3>
-                        <p>Shenzhen, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#f8a446;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/0aSweZQJBk/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-14-17.58.09.jpg" alt="Honeycomb">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Honeycomb</h3>
-                        <p>Guangzhou, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#ebd2d6;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/1Iw-BlwJGT/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-04-15.05.42-1.jpg" alt="Minimal symmetry">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Minimal symmetry</h3>
-                        <p>Hong Kong, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#121011;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/0VkAuWwJGm/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-14-16.13.17.jpg" alt="Zaha Hadid's stairs">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Zaha Hadid's stairs</h3>
-                        <p>Guangzhou, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#9fe2d0;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/0TFH2_QJG9/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-17-02.04.43.jpg">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Cyberfox</h3>
-                        <p>Guangzhou, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#43286c;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/0KFVeIwJAT/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-12-20.53.14-2.jpg" alt="Vortex 2">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Vortex 2</h3>
-                        <p>Shenzhen, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#e90e19;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/1IUOAYQJGS/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-04-16.53.05-1.jpg" alt="The wall">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>The wall</h3>
-                        <p>Hong Kong, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#170922;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/2vcGeEQJHU/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-05-15-21.52.20.jpg" alt="Another world">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Another world</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#382b31;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/2nLtX6QJIm/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-04-18.14.28-1.jpg" alt="Levitating jellyfish">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Levitating jellyfish</h3>
-                        <p>Hong Kong, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#011317;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/2uxGYxwJGQ/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-05-15-22.19.56.jpg" alt="Lone pike">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Lone pike</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#4e5593;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/039jvGwJIB/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/IMG_1317.jpg" alt="Almost there">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Almost there</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#755d58;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/1m3B87QJIZ/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-04-18-00.37.05.jpg" alt="Urban explorers">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Urban explorers</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#9a604c;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/yRPzYQwJHA/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-01-24-17.20.22-HDR-1.jpg" alt="Space ship">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Space ship</h3>
-                        <p>Shanghai, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#bd7c6a;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/0ac6uywJBB/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-03-14-17.59.37.jpg" alt="Vortex">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Vortex</h3>
-                        <p>Guangzhou, 2015</p>
-                    </div>
-                </div>
-            </a></li>
-        <li style="background:#4b7988;">
-            <div class="spinner"></div>
-            <a href="https://instagram.com/p/2-CVzaQJO-/" target="_blank"><img class="lazy" src="images/spacer_photo.gif" data-original="instagram/2015-05-17-14.18.08-2-1.jpg" alt="Interstellar">
-                <div class="gallery_overlay">
-                    <div class="gallery_text">
-                        <h3>Interstellar</h3>
-                        <p>Shanghai, 2015</p>
+                        <h3>G-netlink App v1.7.0-20180728</h3>
+                        <p>UX/UI</p>
                     </div>
                 </div>
             </a></li>
     </ul>
-    <div class="viewall"><a href="blog/"target="_blank">欢迎访问Jay Fan的个人博客</a></div>
 </section>
 <section id="contacts">
     <div class="email"><a href="mailto:18801796806@163.com"><span></span>18801796806@163.com<i><em>&laquo;见天地，见众生，见自己&raquo;</em><br/></i></a></div>
     <div class="social_container">
-        <a href="https://twitter.com/dnevozhai" target="_blank" class="social twitter"><span>博客</span></a>
-        <a href="https://www.linkedin.com/in/dnevozhai" target="_blank" class="social linkedin"><span>邮箱</span></a>
-        <a href="https://dribbble.com/dnevozhai" target="_blank" class="social dribbble"><span>微博</span></a>
+        <a href="https://jayleader.github.io/blog/" target="_blank" class="social twitter"><span>博客</span></a>
+        <a href="mailto:18801796806@163.com" target="_blank" class="social linkedin"><span>邮箱</span></a>
     </div>
 </section>
 <section class="copy"> Designed and built by Jay with HTML5, CSS3, JQuery </section>
@@ -983,17 +467,14 @@
             <li><a href="#whatido" onClick="tog_menu()">About</a></li>
             <li><a href="#timeline" onClick="tog_menu()">Timeline</a></li>
             <li><a href="#work" onClick="tog_menu()">Work</a></li>
-            <li><a href="#writings" onClick="tog_menu()">Writings</a></li>
-            <li><a href="#photo" onClick="tog_menu()">Photography</a></li>
             <li><a href="#contacts" onClick="tog_menu()">Contact me</a></li>
         </ul>
         <div class="social_container">
-            <a href="https://twitter.com/dnevozhai" target="_blank" class="social_menu twitter"><span>博客</span></a>
-            <a href="https://medium.com/@dnevozhai" target="_blank" class="social_menu medium"><span>邮箱</span></a>
-            <a href="https://instagram.com/dnevozhai" target="_blank" class="social_menu instagram"><span>微博</span></a> </div>
+            <a href="https://jayleader.github.io/blog/" target="_blank" class="social_menu twitter"><span>博客</span></a>
+            <a href="mailto:18801796806@163.com" target="_blank" class="social_menu medium"><span>邮箱</span></a>
+        </div>
     </div>
 </div>
-<script type="text/javascript" src="jquery.lazyload.js"></script>
 <script>
     $("img.lazy").lazyload({
 
